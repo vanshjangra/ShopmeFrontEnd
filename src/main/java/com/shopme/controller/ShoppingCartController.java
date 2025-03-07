@@ -2,7 +2,6 @@ package com.shopme.controller;
 
 import com.shopme.entity.CartItem;
 import com.shopme.entity.Customer;
-import com.shopme.exception.CustomerNotFoundException;
 import com.shopme.service.CustomerService;
 import com.shopme.service.ShoppingCartService;
 import com.shopme.util.Utility;
