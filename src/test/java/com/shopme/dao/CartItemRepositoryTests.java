@@ -1,7 +1,6 @@
 package com.shopme.dao;
 
 import com.shopme.entity.CartItem;
-import com.shopme.entity.Customer;
 import com.shopme.entity.Product;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
