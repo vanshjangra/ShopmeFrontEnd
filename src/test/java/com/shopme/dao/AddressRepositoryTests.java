@@ -4,7 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
+import com.shopme.entity.Address;
 import com.shopme.entity.Country;
+import com.shopme.entity.Customer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -100,5 +102,13 @@ public class AddressRepositoryTests {
         Integer addressId = 4;
         Integer customerId = 5;
         repo.setNonDefaultForOthers(addressId, customerId);
+    }
+
+    @Test
+    public void testGetDefault(){
+        Integer customerId = 5;
+        Address address = repo.findDefaultByCustomer(customerId);
+        assertThat(address).isNotNull();
+        System.out.println(address);
     }
 }
